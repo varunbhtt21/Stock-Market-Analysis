@@ -2,7 +2,7 @@
 __pycache__/
 .env
 myenv/
-env/
+env
 access_token.py
 app2.py
 app3.py
