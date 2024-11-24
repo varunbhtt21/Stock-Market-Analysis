@@ -6,11 +6,16 @@ import google.generativeai as genai
 import json
 from datetime import datetime
 import statistics
+import streamlit as st
+
 
 # Load environment variables
-load_dotenv()
-genai_api_key = os.getenv('GENAI_API_KEY')
-rapidapi_key = os.getenv('RAPIDAPI_KEY')
+# load_dotenv()
+# genai_api_key = os.getenv('GENAI_API_KEY')
+# rapidapi_key = os.getenv('RAPIDAPI_KEY')
+
+genai_api_key = st.secrets["GENAI_API_KEY"]
+rapidapi_key = st.secrets["RAPIDAPI_KEY"]
 
 # Check if API keys are loaded
 if not genai_api_key or not rapidapi_key:
